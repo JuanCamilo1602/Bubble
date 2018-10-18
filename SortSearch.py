@@ -10,7 +10,20 @@ def bubble_sort(a):
                 swapped = True
         if not swapped:
             break
-a = [randint(1,1000) for i in range(20)]
+        
+def insertion_sort(a):
+    for i in range(1 , len(a)):
+        x = a[i]
+        index_hole = i
+        
+        while index_hole > 0 and a[index_hole -1] > x:
+            a[index_hole] = a[index_hole - 1]
+            index_hole -= 1
+            
+        a[index_hole] = x
+    
+    
+a = [randint(1,1000) for i in range(50)]
 print(a)
-bubble_sort(a)
+insertion_sort(a)
 print(a)
